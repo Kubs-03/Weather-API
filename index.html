@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webappli</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@v0.79.0/dist/L.Control.Locate.min.css" />
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+        <div class="logo">MAPAPI</div>
+        <ul>
+            <li><a href="#" id="home-link">Home</a></li>
+            <li><a href="#" id="contact-link">Contact</a></li>
+            <li><a href="#" id="about-link">About</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <div class="container">
+        <div id="map"></div>
+        <div class="card">
+            <div class="search">
+                <input type="text" id="city-search" placeholder="Enter the city name" spellcheck="false">
+                <button id="search-btn"><img src="weather-app-img/images/search.png" alt="imagehere"></button>
+            </div>
+            <div class="error">
+                <p>Invalid input</p>
+            </div>
+            <div class="weather">
+                <div class="icontemp">
+                    <img src="weather-app-img/images/rain.png" class="weather-icon">
+                    <h1 class="temp">22°C</h1>
+                </div>
+                <h2 class="city">NEW</h2>
+                <div class="details">
+                    <div class="col">
+                        <img src="weather-app-img/images/humidity.png">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="weather-app-img/images/wind.png">
+                        <div>
+                            <p class="wind">15km/h</p>
+                            <p>Wind speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden content -->
+    <div id="home-content" class="hidden-content">
+        <p> This is a home content</p>
+    </div>
+
+    <div id="about-content" class="hidden-content">
+        <p>This weather map application utilizes the OpenWeather API to fetch real-time weather data for cities worldwide. It displays information such as city name, current temperature, humidity level, wind speed, and weather conditions. The application is built using HTML, CSS for styling, and JavaScript for interactive functionalities.
+            It integrates with Leaflet.js for mapping and geocoding features, allowing users to search for cities and view weather details directly on the map interface.</p>
+    </div>
+    <div id="contact-content" class="hidden-content">
+        <p> Feel free to contact me for collabrations.<br>
+            <strong>contact:</strong>ushabhagyasrik@gmail.com<br>
+            <strong>Linkedin:</strong>www.linkedin.com/in/ushabsrik
+        </p>
+     </div>
+    
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@v0.79.0/dist/L.Control.Locate.min.js"
+        charset="utf-8"></script>
+    <script src="./india.js"></script>
+    <script src="/script.js"></script>
+</body>
+
+</html>
